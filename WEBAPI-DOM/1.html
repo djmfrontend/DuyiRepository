@@ -2,49 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>ECharts Brush Example</title>
-    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
   </head>
   <body>
-    <!-- 用于展示图表的 div -->
-    <div id="main" style="width: 600px; height: 400px"></div>
-
-    <script type="text/javascript">
-      // 初始化 ECharts 实例
-      var myChart = echarts.init(document.getElementById("main"));
-
-      // 初始数据
-      var originalData = [10, 20, 30, 40, 50];
-
-      // 指定图表的配置项和数据
-      var option = {
-        xAxis: {
-          type: "category",
-          data: ["A", "B", "C", "D", "E"],
-        },
-        yAxis: {
-          type: "value",
-        },
-        series: [
-          {
-            type: "bar",
-            data: originalData,
-          },
-        ],
-        brush: {
-          throttleType: "debounce",
-          throttleDelay: 300,
-          xAxisIndex: 0,
-          brushLink: "all", // 同步 brush 操作到所有图表
-          inBrush: {
-            opacity: 1, // 设置选中区域的透明度
-          },
-          toolbox: ["rect", "polygon", "lineX", "lineY", "keep", "clear"], // 启用 toolbox
-        },
-      };
-
-      // 使用刚指定的配置项和数据显示图表
-      myChart.setOption(option);
-    </script>
+    <a href="./2.html" abcasdfas="asdfdasfdadfsasdf">go to 2.html</a>
+    <input type="checkbox" checked="checked" name="" id="" />
+    <p>
+      what is
+      <strong>dom</strong>
+      ?
+    </p>
+    <ul>
+      <li>选项1</li>
+      <li>选项2</li>
+      <li>选项3</li>
+      <li>选项4</li>
+      <li>选项5</li>
+    </ul>
   </body>
 </html>
