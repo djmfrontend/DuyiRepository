@@ -17,6 +17,12 @@ app.get("/news/:id", (req, res) => {
   //   res.send("hello"); //send 会根据你发送数据的格式 自动设置响应头 Content-Type
 
   res.status(301).header("location", "https://www.baidu.com").end(); // 重定向到百度
+  //   res.status(302).location("https://www.baidu.com").end();
+  //   res.redirect("https://www.baidu.com", 302);
+});
+// 匹配任何get请求
+app.get("*", (req, res) => {
+  //
 });
 
 const server = http.createServer(app);
