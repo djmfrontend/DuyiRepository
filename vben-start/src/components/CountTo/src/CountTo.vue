@@ -20,6 +20,7 @@ const props = defineProps({
 });
 
 const source = ref(props.startValue);
+console.log(source);
 onMounted(() => {
   console.log(props.startValue);
 });
