@@ -1,24 +1,19 @@
-<script setup lang="ts">
-import { Button } from "ant-design-vue";
-</script>
-
 <template>
   <div>
-    <Button type="primary">3232</Button>
+    <BasicTable>
+      <template #bodyCell="{ column, record }">
+        <template v-if="column.key === 'action'"> 3332 </template>
+      </template>
+    </BasicTable>
   </div>
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<script setup lang="ts">
+import { Button } from "ant-design-vue";
+import { BasicTable } from "@/components/Table";
+import { useTable } from "@/components/Table/src/hooks/useTable";
+const [registerTable] = useTable({
+  columns: [],
+});
+console.log(registerTable);
+</script>
+<style scoped></style>
