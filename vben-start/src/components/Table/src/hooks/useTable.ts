@@ -12,6 +12,7 @@ export function useTable(
   const tableRef = ref<Nullable<TableActionType>>(null);
   let stopWatch: WatchStopHandle;
   function register(instance: TableActionType) {
+    console.log("执行注册", instance);
     onUnmounted(() => {
       loadedRef.value = null;
       tableRef.value = null;
